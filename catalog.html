@@ -25,23 +25,41 @@
         </ul>
     </nav>
     <section class="filters">
-        <div class="choice">
-            <h3>Инфраструктура:</h3>
-            <span class="button">Бассейн</span>
-            <span class="button">Парковка</span>
-            <span class="button">Wi-Fi</span>
+        <img src="background.jpg" <div class="choice">
+        <h2>Инфраструктура:</h2>
+        <form action="post">
+            <p>
+                <input type="checkbox" name="pool" value="Бассейн">Бассейн</p>
+            <p>
+                <input type="checkbox" name="parklot" value="Парковка">Парковка</p>
+            <p>
+                <input type="checkbox" name="wifi" value="Wi-Fi">Wi-Fi</p>
+        </form>
         </div>
         <div class="housing_type">
-            <h3>Тип жилья:</h3>
-            <span class="button">ГОСТИНИЦА</span>
-            <span class="button">МОТЕЛЬ</span>
-            <span class="button">АПАРТАМЕНТЫ</span>
+            <h2>Тип жилья:</h2>
+            <form>
+                <p>
+                    <input type="checkbox" name="hotel">Гостиница </p>
+                <p>
+                    <input type="checkbox" name="motel">Мотель </p>
+                <p>
+                    <input type="checkbox" name="aps">АПАРТАМЕНТЫ </p>
+            </form>
         </div>
+
         <div class="price_range">
             <h2>Стоимость в сутки (Р):</h2>
-            <span class="price_from">От 0</span>
-            <span class="price_to">До 3000</span>
-            <button type="submit">Показать</button>
+            <span>От 0</span>
+            <span>До 3000</span>
+            <form>
+                <input type="range" min="0" max="3000" />
+                <input type="submit" value="ПОКАЗАТЬ">
+            </form>
+
+
+
+
         </div>
     </section>
     <section class="results">
@@ -58,7 +76,7 @@
     </section>
     <div class="hotel_list">
         <h2 class="amara">Amara hotel & SPA</h2>
-        <img src="http://placehold.it/150x100" alt="amara_hotel_spa_pic">
+        <img src="amara.png" alt="amara_hotel_spa_pic">
         <span class="hotel_type">Гостиница</span>
         <span class="price">ОТ 3500 Р.</span>
         <button type="submit">Подробнее</button>
@@ -69,7 +87,7 @@
 
     <div class="hotel_list">
         <h2 class="desert_qual_inn">DESERT QUAL INN</h2>
-        <img src="http://placehold.it/150x100" alt="desert_qual_inn_pic">
+        <img src="desert.png" alt="desert_qual_inn_pic">
         <span class="hotel_type">Мотель</span>
         <span class="price">ОТ 2000 Р.</span>
         <button type="submit">Подробнее</button>
@@ -80,7 +98,7 @@
 
     <div class="hotel_list">
         <h2 class="villas_at_poco">VILLAS AT POCO DIABLO</h2>
-        <img src="http://placehold.it/150x100" alt="villas_at_poco_diablo_pic">
+        <img src="villas.png" alt="villas_at_poco_diablo_pic">
         <span class="hotel_type">АПАРТАМЕНТЫ</span>
         <span class="price">ОТ 4000 Р.</span>
         <button type="submit">Подробнее</button>
@@ -88,8 +106,6 @@
         <img class=3stars_rate src="#" alt="3stars">
         <span class=rating> Рейтинг 9.2 </span>
     </div>
-
-
 
     <footer>
         <div class="hashtag">
