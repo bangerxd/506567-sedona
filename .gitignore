@@ -7,3 +7,5 @@
 *.sublime*
 node_modules/
 Thumbs.db
+sedona-test/catalog_test.html
+sedona-test/index_test.html

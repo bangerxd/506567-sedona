@@ -12,8 +12,8 @@
 <body>
     <div class="wrapper">
         <header class="menu">
-            <nav class="main_navigation">
-                <ul class="main_navigation_list">
+            <nav class="main_navigation active">
+                <ul class="main_navigation_list active">
                     <li>
                         <a href="index.html">информация</a>
                     </li>
@@ -24,7 +24,7 @@
                         <a href="/">карта штата </a>
                     </li>
                     <li>
-                        <a href="catalog.html">гостиницы </a>
+                        <a class="inner_page" href="catalog.html">гостиницы </a>
                     </li>
                 </ul>
                 <a class="main-header-logo">
@@ -34,12 +34,12 @@
 
         </header>
         <section class="filters">
-            <h2 class="visually_hidden">Форма поиска</h2>
             <form class="catalog_form" action="#" method="post">
+                <h2 class="visually_hidden">Форма поиска</h2>
                 <div class="form_wrap">
                     <fieldset>
-                        <legend>Инфраструктура:</legend>
-                        <ul>
+                        <legend class=option_title>Инфраструктура:</legend>
+                        <ul class="hotel_option_first">
                             <li class="hotel_option">
                                 <input class="visually_hidden filter_input" type="checkbox" name="pool" id="pool" value="Бассейн" checked />
                                 <label for="pool">бассейн</label>
@@ -57,8 +57,8 @@
                 </div>
                 <div class="form_wrap">
                     <fieldset>
-                        <legend>Тип жилья:</legend>
-                        <ul>
+                        <legend class="option_title housing_type">Тип жилья:</legend>
+                        <ul class="hotel_option_second">
                             <li>
                                 <input class="visually_hidden filter_input" type="checkbox" name="hotel" id="hotel" checked>
                                 <label for="hotel">отель</label>
@@ -75,30 +75,31 @@
                     </fieldset>
                 </div>
                 <div class="form_wrap">
-                    <section class="price_range">
-                        <h2 class="visually_hidden">ranger</h2>
-                        <fieldset>
-                            <legend>Стоимость в сутки (Р):</legend>
-                            <p class="pricing">
-                                <span class="visually_hidden">От 0</span>
-                                <span class="visually_hidden">До 3000</span>
-                                <input class="price_range" type="number" value="0">
-                                <input class="price_range" type="number" value="3000">
-                            </p>
-                            <p class=ranger_p>
-                                <input type="range" min="0" max="3000">
-                            </p>
-                            <p class="show_results">
-                                <input type="submit" class="filters_show_result" value="Показать">
-                            </p>
-                        </fieldset>
+                    <section class="filter-range">
+                        <div class="filter-range-title">Стоимость в сутки (р):</div>
+                        <div class="price-controls">
+                            <label class="min-price">от
+                                <input type="text" name="min-price" value="0">
+                            </label>
+                            <label class="max-price">до
+                                <input type="text" name="max-price" value="3000">
+                            </label>
+                        </div>
+                        <div class="range-controls">
+                            <div class="scale">
+                                <div class="bar"></div>
+                            </div>
+                            <div class="range-toggle range-toggle-min"></div>
+                            <div class="range-toggle range-toggle-max"></div>
+                        </div>
+                        <button class="btn-transparent" type="submit">Показать</button>
                     </section>
                 </div>
             </form>
         </section>
         <section class="search_results">
             <div class="sort">
-                <h2> Найдено: 3</h2>
+                <h2 class="sorting_title"> Найдено: 3</h2>
                 <div class="sort_container">
                     <span class="sorting">Сортировка:</span>
                     <ul class="sorting_buttons">
@@ -113,12 +114,22 @@
                         </li>
                     </ul>
                 </div>
-                <!-- <p class="dir_buttons">
-                    <button class="icon_up_dir" type="button">
-                    </button>
-                    <button class="icon_down_dir" type="button">
-                    </button> 
-                </p> -->
+                <ul class="button_up_down_dir">
+                    <li>
+                        <a href="#" class="icon_up_dir">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="11" height="10" viewBox="0 0 11 10">
+                                <path fill="#231F20" d="M5.5 0L0 10h11z"></path>
+                            </svg>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="icon_down_dir">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="11" height="10" viewBox="0 0 11 10">
+                                <path fill="#231F20" d="M5.5 10L0 0h11"></path>
+                            </svg>
+                        </a>
+                    </li>
+                </ul>
             </div>
         </section>
         <section class="hotel_list">
@@ -136,14 +147,18 @@
             <div class="hotel_pic">
                 <img src="./img/amara.png" alt="amara_hotel_spa_pic">
             </div>
-            <ul>
-                <li class="starred"></li>
-                <li class="starred"></li>
-                <li class="starred"></li>
-                <li class="starred"></li>
-                <li class="starred"></li>
-            </ul>
-            <span class="rating"> Рейтинг 8.5 </span>
+            <div class="hotel_right_block">
+                <div class="stars_wrap">
+                    <ul class=stars_rate>
+                        <li class="starred"></li>
+                        <li class="starred"></li>
+                        <li class="starred"></li>
+                        <li class="starred"></li>
+                        <li class="starred"></li>
+                    </ul>
+                </div>
+                <span class="rating"> Рейтинг 8.5 </span>
+            </div>
         </section>
         <section class="hotel_list">
             <div class="hotel_wrap">
@@ -160,14 +175,16 @@
             <div class="hotel_pic">
                 <img src="./img/desert.png" alt="desert_qual_inn_pic">
             </div>
-            <ul>
-                <li class="starred"></li>
-                <li class="starred"></li>
-                <li class="starred"></li>
-                <li class="starred"></li>
-                <li class="starred"></li>
-            </ul>
-            <span class="rating"> Рейтинг 8.9 </span>
+            <div class="hotel_right_block">
+                <ul class="stars_rate">
+                    <li class="starred"></li>
+                    <li class="starred"></li>
+                    <li class="starred"></li>
+                    <li class="starred"></li>
+                    <li class="starred"></li>
+                </ul>
+                <span class="rating"> Рейтинг 8.9 </span>
+            </div>
         </section>
         <section class="hotel_list">
             <div class="hotel_wrap">
@@ -184,16 +201,18 @@
             <div class="hotel_pic">
                 <img src="./img/villas.png" alt="desert_qual_inn_pic">
             </div>
-            <ul>
-                <li class="starred"></li>
-                <li class="starred"></li>
-                <li class="starred"></li>
-                <li class="starred"></li>
-                <li class="starred"></li>
-            </ul>
-            <span class="rating"> Рейтинг 9.2 </span>
+            <div class="hotel_right_block">
+                <ul class="stars_rate">
+                    <li class="starred"></li>
+                    <li class="starred"></li>
+                    <li class="starred"></li>
+                    <li class="starred"></li>
+                    <li class="starred"></li>
+                </ul>
+                <span class="rating"> Рейтинг 9.2 </span>
+            </div>
         </section>
-        <footer>
+        <footer class="catalog_footer">
             <div class="container">
                 <a class="hashtag" href="https://visitsedona.com/">#VISITSEDONA</a>
                 <ul class="socials">

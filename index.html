@@ -21,17 +21,17 @@
             <a href="/">фото и Видео</a>
           </li>
           <li>
-            <a class="main-header-logo">
-              <img src="./img/logo-sedona.png" alt="Логотип Седоны" width="138" height="70">
-            </a>
-          </li>
-          <li>
             <a href="/">карта штата </a>
           </li>
           <li>
             <a href="catalog.html">гостиницы </a>
           </li>
         </ul>
+        <div class="logo">
+          <a class="main-header-logo">
+            <img src="./img/logo-sedona.png" alt="Логотип Седоны" width="138" height="70">
+          </a>
+        </div>
       </nav>
 
     </header>
@@ -39,7 +39,7 @@
       <img src="./img/intro.jpg" alt="intro">
     </div>
 
-    <article class="desription">
+    <article class="description">
       <h1 class="desctiption_header">Седона — небольшой городок в аризоне,
         <br> заслуживающий большего!</h1>
       <p class="description_text">Рассмотрим 5 причин, по которым седона круче, чем гранд каньон!!!</p>
@@ -121,78 +121,74 @@
       <h2>заинтересовались?</h2>
       <p class="search_desc">Укажите предполагаемые даты поездки,
         <br>и мы покажем вам лучшие предложения гостиниц в седоне</p>
-    </div>
-    <!-- Форма поиска-->
-    <section class="search_form">
-      <h2 class="visually_hidden">Поиск гостиницы в седоне</h2>
-      <button type="button" class="search_sedona">Поиск гостиницы в седоне</button>
-      <form action="/" method="post">
-        <!-- Прибытие -->
-        <div class="search_form_field">
-          <label for="date-in">дата заезда</label>
-          <input type="text" id="date-in" value placeholder="24 апреля 2014">
-          <button type="button" class="search_form_calendar">
-          </button>
-        </div>
-        <!-- Выезд -->
-        <div class="search_form_field">
-          <label for="day-out">дата выезда</label>
-          <input type="text" id="day-out" value placeholder="4 июля 2014">
-          <button type="button" class="search_form_calendar">
-          </button>
-        </div>
-        <!-- Взрослые -->
-        <div class="adults">
-          <p class="adults_number">
-            <label for="adults">взрослые</label>
-            <button type="button" class="plus_button"></button>
-            <input type="number" value="2" id="adults">
-            <button type="button" class="minus_button"></button>
+      <!-- Форма поиска-->
+      <section class="search_form">
+        <!-- <h2 class="visually_hidden">Поиск гостиницы в седоне</h2> -->
+        <button type="button" class="search_sedona">Поиск гостиницы в седоне</button>
+        <form class="hotel_search_form" action="/" method="post">
+          <!-- Прибытие -->
+          <p class="search_form_field">
+            <label for="date-in">дата заезда</label>
+            <input type="text" id="date-in" placeholder="24 апреля 2014">
+            <button type="button" class="calendar"></button>
           </p>
-        </div>
-        <!-- Дети -->
-        <div>
-          <div class="children">
-            <p class="children_number">
-              <label for="children">дети</label>
-              <button type="button" class="plus_button">+</button>
-              <input type="number" value="2" id="children">
-              <button type="button" class="minus_button">-</button>
+          <!-- Выезд -->
+          <p class="search_form_field">
+            <label for="day-out">дата выезда</label>
+            <input type="text" id="day-out" placeholder="4 июля 2014">
+            <button type="button" class="calendar"></button>
+          </p>
+          <!-- Взрослые -->
+          <div class="control_buttons">
+            <p class="form_number">
+              <label for="adults">взрослые</label>
+              <button type="button" class="plus_button"></button>
+              <input class="input_number" type="number" value="2" id="adults">
+              <button type="button" class="minus_button"></button>
+            </p>
+            <!-- Дети -->
+            <p class="form_number">
+              <label class="kids" for="children">дети</label>
+              <button type="button" class="plus_button"></button>
+              <input class="input_number" type="number" value="2" id="children">
+              <button type="button" class="minus_button"></button>
             </p>
           </div>
-          <input type="submit" class="search_show_results" value="найти">
-        </div>
-        <img src="./" alt="карта">
-      </form>
-    </section>
-    <footer>
-      <div class="container">
-        <a class="hashtag" href="https://visitsedona.com/">#VISITSEDONA</a>
-        <ul class="socials">
-          <li>
-            <a href="" class="social_button twitter">
-              twitter
-            </a>
-          </li>
-          <li>
-            <a href="" class="social_button facebook">
-              facebook
-            </a>
-          </li>
-          <li>
-            <a href="" class="social_button youtube">
-              youtube
-            </a>
-          </li>
-        </ul>
-        <p class="copyright">
-          <span>Website by</span>
-          <a href="https://htmlacademy.ru/">
-            <img class="logo-footer" src="./img/logo-htmlacademy.svg" alt="html_academy_logo" width="115" height="41">
-          </a>
-        </p>
+          <input type="submit" class="search_show_results_button" value="найти">
+        </form>
+      </section>
+      <div class="map">
+        <img class="map" src="./img/map.png" alt="карта">
       </div>
-    </footer>
+      <footer class="main_footer">
+        <div class="container">
+          <a class="hashtag" href="https://visitsedona.com/">#VISITSEDONA</a>
+          <ul class="socials">
+            <li>
+              <a href="" class="social_button twitter">
+                twitter
+              </a>
+            </li>
+            <li>
+              <a href="" class="social_button facebook">
+                facebook
+              </a>
+            </li>
+            <li>
+              <a href="" class="social_button youtube">
+                youtube
+              </a>
+            </li>
+          </ul>
+          <p class="copyright">
+            <span>Website by</span>
+            <a href="https://htmlacademy.ru/">
+              <img class="logo-footer" src="./img/logo-htmlacademy.svg" alt="html_academy_logo" width="115" height="41">
+            </a>
+          </p>
+        </div>
+      </footer>
+    </div>
   </div>
 </body>
 
